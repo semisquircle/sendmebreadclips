@@ -1,0 +1,104 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	background: #7d2a0c;
+}
+
+* {
+	font-family: "Doyle";
+	box-sizing: border-box;
+}
+
+div {
+	display: flex;
+	flex-direction: column;
+}
+
+.bread {
+	--slice-dimension: 400px;
+	--slice-thickness: 60px;
+	--border-width: 15px;
+	--border-radius: 30px;
+	--slice-offset: calc(var(--slice-dimension) + var(--border-width));
+	flex-direction: row;
+}
+
+.bread-slice {
+	position: relative;
+	padding: var(--border-width);
+	padding-right: 0;
+	border-radius: var(--border-radius);
+	background: var(--bread2);
+	transition: all 0.5s;
+	overflow: hidden;
+}
+.bread .bread-slice:not(:last-child) {margin-right: calc(-1 * var(--slice-offset));}
+.bread .bread-slice:not(:first-child):hover {margin-left: var(--slice-offset);}
+.bread-slice:nth-child(odd) {transform: rotate(2deg);}
+.bread-slice:nth-child(even) {transform: rotate(-2deg);}
+.slice1 {z-index: 13;}
+.slice2 {z-index: 12;}
+.slice3 {z-index: 11;}
+.slice4 {z-index: 10;}
+
+.bread-face {
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: var(--slice-dimension);
+	width: var(--slice-dimension);
+	font-size: 15px;
+	padding: 20px;
+	margin-right: var(--slice-thickness);
+	border-radius: calc(var(--border-radius) - var(--border-width));
+	background: var(--bread1);
+	color: var(--toast3);
+	z-index: 6;
+}
+
+.bread-shadow {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: var(--slice-thickness);
+	background: linear-gradient(90deg, transparent, #0002);
+	z-index: 5;
+}
+
+.title {
+	text-align: right;
+	font-size: 30px;
+	font-weight: 900;
+	font-style: italic;
+	color: var(--toast3);
+}
+.title span {
+	font-size: 0.6em;
+	color: var(--toast1);
+}
+
+.bread-clip-container {
+	flex-direction: row;
+	margin: 40px 0;
+}
+
+.bread-clip {width: 90px;}
+.bread-clip + .bread-clip {margin-left: 10px;}
+
+.bread-clip-container .bread-clip path {fill: #00a9a6;}
+.bread-clip-container .bread-clip:nth-child(2) path {fill: white;}
+.bread-clip-container .bread-clip:nth-child(3) path {fill: #ba365c;}
+
+.info {display: block;}
+.info span {
+	font-weight: 700;
+	color: var(--toast1);
+}
