@@ -1,6 +1,6 @@
 html {font-size: 9px;}
 
-.github-corner {display: none;}
+.github-corner {display: none !important;}
 
 .bread {
 	flex-direction: column;
