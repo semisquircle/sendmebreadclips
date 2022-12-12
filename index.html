@@ -205,12 +205,12 @@
 			newSlice(currentSlice);
 		});
 
-		$(document).on("swipeup", function() {
+		$(document).on("swipedown", function() {
 			if (currentSlice > 1) currentSlice--;
 			newSlice(currentSlice);
 		});
 
-		$(document).on("swipedown", function() {
+		$(document).on("swipeup", function() {
 			if (currentSlice < sliceCount) currentSlice++;
 			newSlice(currentSlice);
 		});
