@@ -12,7 +12,7 @@
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
 	<script src="https://kit.fontawesome.com/5978d27576.js" crossorigin="anonymous"></script>
 	<script src="https://www.cssscript.com/demo/add-customizable-speckles-elements-speckle-js/speckle.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
 	<link rel="stylesheet" href="css/variables.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -158,6 +158,9 @@
 		<div class="mobile-nav">Swipe to scroll through slices</div>
 	</div>
 
+
+
+	<script src="js/swipe.js"></script>
 	<script>
 		$(".bread-clip").eq(0).load("img/svgs/2.svg");
 		$(".bread-clip").eq(1).load("img/svgs/1.svg");
@@ -202,12 +205,12 @@
 			newSlice(currentSlice);
 		});
 
-		$("body").on("swipeup", function() {
+		$(document).on("swipeup", function() {
 			if (currentSlice > 1) currentSlice--;
 			newSlice(currentSlice);
 		});
 
-		$("body").on("swipedown", function() {
+		$(document).on("swipedown", function() {
 			if (currentSlice < sliceCount) currentSlice++;
 			newSlice(currentSlice);
 		});

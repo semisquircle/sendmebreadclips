@@ -42,7 +42,7 @@ div {
 .bread-slice {
 	position: relative;
 	padding: var(--border-width);
-	padding-right: 0;
+	padding-right: var(--slice-thickness);
 	border-radius: var(--border-radius);
 	background: var(--bread2);
 	transition: all 0.5s;
@@ -62,7 +62,6 @@ div {
 	width: var(--slice-dimension);
 	font-size: 1rem;
 	padding: 3rem 2rem;
-	margin-right: var(--slice-thickness);
 	border-radius: calc(var(--border-radius) - var(--border-width));
 	background: var(--bread1);
 	color: var(--toast3);
