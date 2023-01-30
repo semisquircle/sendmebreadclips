@@ -16,8 +16,8 @@ body {
 }
 
 * {
-	font-family: "Doyle";
-	line-height: 1.3;
+	font-family: "Inkwell Serif";
+	font-weight: 500;
 	box-sizing: border-box;
 }
 
@@ -80,14 +80,14 @@ div {
 }
 
 .title {
-	font-size: 1.6rem;
+	font-family: "Inkwell Tuscan";
+	font-size: 1.5rem;
 	font-weight: 900;
-	font-style: italic;
 	color: var(--toast3);
 }
 .title span {
 	align-self: flex-end;
-	font-size: 0.6em;
+	font-size: 1rem;
 	font-weight: 700;
 	color: var(--toast1);
 }
@@ -127,7 +127,7 @@ div {
 }
 
 .clip-example {
-	font-size: 0.6em;
+	font-size: 0.7em;
 	font-style: italic;
 	color: var(--toast1);
 }
@@ -146,7 +146,7 @@ div {
 	flex-direction: row;
 	align-items: center;
 	font-size: 5rem;
-	font-weight: 700;
+	font-weight: 900;
 	color: var(--toast1);
 }
 
@@ -157,50 +157,82 @@ div {
 
 
 
-/* Form */
-.form-row {
-	width: 100%;
+/* How */
+.how-row {
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
+	width: 100%;
+	text-align: left;
 }
-.form-row + .form-row {margin-top: 0.5rem;}
+
+.how-row img {
+	height: 3rem;
+	margin-right: 2rem;
+}
+
+.how-row div {
+	justify-content: flex-start;
+	align-items: flex-start;
+	height: 100%;
+	font-family: "Inkwell Tuscan";
+	font-size: 2rem;
+	font-weight: 900;
+	margin-right: 1rem;
+	color: var(--toast1);
+}
+
+
+
+/* Form */
+.slice5 .bread-face {padding: 2.2rem;}
+
+.form {width: 100%;}
+
+.form-row {
+	align-items: flex-start;
+	width: 100%;
+}
+.form-row + .form-row {margin-top: 0.6rem;}
 
 .form-question {
-	text-align: left;
-	font-size: 0.7em;
-	width: calc(40% - 1rem);
+	font-size: 0.9em;
+	margin-bottom: 0.3em;
 }
 
-.form-answer {
-	align-items: flex-end;
-	min-width: 60%;
-	max-width: 60%;
-}
+.form-answer {width: 100%;}
 
-.name-input, .clip-counter {height: 2.5rem;}
+.name-input, .clip-counter {height: 2rem;}
 .name-input, .clip-input {
-	font-size: 0.7em;
+	font-size: 0.9em;
 	padding: 0 1em;
 	margin: 0;
+	color: var(--toast1);
 	outline: none;
 	border-radius: 0;
 	-webkit-appearance: none;
 }
 
 .name-input {
-	text-align: center;
 	width: 100%;
-	border: 0.2rem solid var(--toast3);
-	border-radius: 999rem;
-	background: var(--toast1);
-	color: var(--bread1);
+	border: 0;
+	border-radius: 0.4rem;
+	background: white;
 }
+
+.clip-row {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1.5rem !important;
+}
+
+.clip-row .form-question {margin: 0;}
 
 .clip-counter {
 	flex-direction: row;
-	width: 100%;
-	border-radius: 999rem;
+	width: 10rem;
+	border-radius: 0.5rem;
 	overflow: hidden;
 }
 .clip-counter > * {height: 100%;}
@@ -208,54 +240,50 @@ div {
 .clip-input {
 	text-align: center;
 	width: 100%;
-	border: 0.2rem solid var(--toast3);
+	border: 0;
 	border-left: 0;
 	border-right: 0;
-	background: var(--toast1);
-	color: var(--bread1);
+	background: white;
 }
 
 .clip-adj {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-width: 2.7rem;
-	font-size: 1rem;
+	min-width: 2.2rem;
+	font-size: 0.9rem;
 	border: 0;
 	outline: none;
-	background: var(--toast3);
-	color: var(--bread1);
+	background: var(--toast1);
+	color: white;
 	cursor: pointer;
 }
+.clip-adj:nth-child(1) svg {transform: scaleX(-1);}
+.clip-adj:hover {background: var(--toast3);}
 
 .submit-btn {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 4rem;
+	height: 3.5rem;
 	width: 100%;
+	font-family: "Inkwell Tuscan";
 	font-size: 1.5rem;
 	font-weight: 700;
-	font-style: italic;
-	border: 0.2rem solid var(--toast3);
+	border: 0;
 	border-radius: 999rem;
 	outline: 0;
 	background: var(--toast1);
-	color: var(--bread1);
+	color: white;
 	cursor: pointer;
 }
-.submit-btn svg {margin: 0 0.5em;}
-.submit-btn:hover {
-	background: var(--toast3);
-	color: var(--bread1);
-}
+.submit-btn:hover {background: var(--toast3);}
 
 
 
 /* Nav */
 .nav-container {
 	opacity: 0;
-	font-style: italic;
 	color: var(--bread1);
 	animation: fade-in 1s;
 	animation-delay: 1s;

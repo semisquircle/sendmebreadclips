@@ -16,6 +16,7 @@
 
 	<link rel="stylesheet" href="css/variables.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="fonts/fonts.css">
 	<link rel="stylesheet" href="https://semipedia.cool/fonts/fonts.css">
 	<link rel="stylesheet" media="all and (max-width: 900px)" href="css/mobile.css">
 </head>
@@ -37,43 +38,49 @@
 					<div class="bread-clip"></div>
 				</div>
 
-				<div class="info">Hi! My name is <span>Robin</span> and I collect <span>bread clips</span>, also known as Occlupanids.</div>
+				<div class="info">
+					Hi! My name is <span>Shawn</span> and I collect <span>bread clips</span>,<br>
+					also known as Occlupanids.
+				</div>
 			</div>
 			<div class="bread-shadow"></div>
 		</div>
 
 		<div class="bread-slice slice2">
 			<div class="bread-face">
-				<div class="slice-p">There's a lotta different types of bread clips. Here's a few classifications:</div>
+				<div class="slice-p">
+					There's a lotta different types of bread clips.<br>
+					Here's a few classifications:
+				</div>
 
 				<div class="clip-example-container">
 					<div class="clip-example">
-						<img src="img/pngs/palpatophora-utiliformis.jpg">
+						<img src="img/clips/pngs/palpatophora-utiliformis.jpg">
 						Palpatophora<br>utiliformis
 					</div>
 
 					<div class="clip-example">
-						<img src="img/pngs/cyrtotergum-albus.jpg">
+						<img src="img/clips/pngs/cyrtotergum-albus.jpg">
 						Cyrtotergum<br>albus
 					</div>
 
 					<div class="clip-example">
-						<img src="img/pngs/genevertonicus-quimbyi.jpg">
+						<img src="img/clips/pngs/genevertonicus-quimbyi.jpg">
 						Genevertonicus<br>quimbyi
 					</div>
 
 					<div class="clip-example">
-						<img src="img/pngs/toroidopanis-minor.jpg">
+						<img src="img/clips/pngs/toroidopanis-minor.jpg">
 						Toroidopanis<br>minor
 					</div>
 
 					<div class="clip-example">
-						<img src="img/pngs/coronaspinus-gregigelida.jpg">
+						<img src="img/clips/pngs/coronaspinus-gregigelida.jpg">
 						Coronaspinus<br>gregigelida
 					</div>
 
 					<div class="clip-example">
-						<img src="img/pngs/impleximotus-stellaformatus.jpg">
+						<img src="img/clips/pngs/impleximotus-stellaformatus.jpg">
 						Impleximotus<br>stellaformatus
 					</div>
 				</div>
@@ -83,12 +90,15 @@
 
 		<div class="bread-slice slice3">
 			<div class="bread-face">
-				<div class="slice-p">Anyway, I'm building a bread clip collection for an art project.</div>
+				<div class="slice-p">
+					Anyway, I'm building a bread clip collection<br>
+					for an art project.
+				</div>
 
 				<div class="slice-p">I will pay you</div>
 
 				<div class="quarter-container">
-					<img class="quarter" src="img/quarter2.gif">
+					<img class="quarter" src="img/quarter/quarter2.gif">
 					25¢
 				</div>
 
@@ -99,7 +109,23 @@
 
 		<div class="bread-slice slice4">
 			<div class="bread-face">
-				Somethin about how to send the clips blah blah blah
+				<div class="title">Here's how it works:</div>
+
+				<div class="how-row">
+					<img src="img/icons/icon.svg">
+					<div>1.</div>
+					Fill out the next slice to inform me of your clip inquiries.
+				</div>
+				<div class="how-row">
+					<img src="img/icons/icon.svg">
+					<div>2.</div>
+					You'll recieve an email with instructions and an address when I'm available for clip business.
+				</div>
+				<div class="how-row">
+					<img src="img/icons/icon.svg">
+					<div>3.</div>
+					Package your clips as instructed and I will transfer you the payment upon recieving the clips in the mail!
+				</div>
 			</div>
 			<div class="bread-shadow"></div>
 		</div>
@@ -123,23 +149,17 @@
 						</div>
 					</div>
 	
-					<div class="form-row">
-						<div class="form-question">How many bread clips would you like to send?</div>
-						<div class="form-answer">
-							<div class="clip-counter" data-min="0" data-max="20">
-								<button class="clip-adj dec"><i class="fa-solid fa-hand-point-down"></i></button>
-								<input class="clip-input" type="text" value="0" autocomplete="off">
-								<button class="clip-adj inc"><i class="fa-solid fa-hand-point-up"></i></button>
-							</div>
+					<div class="form-row clip-row">
+						<div class="form-question">How many bread clips<br>would you like to send?</div>
+						<div class="clip-counter" data-min="1" data-max="20">
+							<button class="clip-adj dec"><i class="fa-solid fa-hand-point-down"></i></button>
+							<input class="clip-input" type="text" value="1" autocomplete="off">
+							<button class="clip-adj inc"><i class="fa-solid fa-hand-point-up"></i></button>
 						</div>
 					</div>
 				</div>
 
-				<button class="submit-btn">
-					<i class="fa-solid fa-bread-slice"></i>
-					Submit
-					<i class="fa-solid fa-bread-slice"></i>
-				</button>
+				<button class="submit-btn">Submit to Shawn</button>
 			</div>
 			<div class="bread-shadow"></div>
 		</div>
@@ -162,9 +182,9 @@
 
 	<script src="js/swipe.js"></script>
 	<script>
-		$(".bread-clip").eq(0).load("img/svgs/2.svg");
-		$(".bread-clip").eq(1).load("img/svgs/1.svg");
-		$(".bread-clip").eq(2).load("img/svgs/3.svg");
+		$(".bread-clip").eq(0).load("img/clips/svgs/2.svg");
+		$(".bread-clip").eq(1).load("img/clips/svgs/1.svg");
+		$(".bread-clip").eq(2).load("img/clips/svgs/3.svg");
 
 
 
@@ -234,11 +254,12 @@
 		});
 
 		$(".clip-input").on("propertychange input", function() {
+			var min = parseInt($(this).parent().attr("data-min"));
 			var max = parseInt($(this).parent().attr("data-max"));
 			var formattedVal = parseInt($(this).val());
 
 			if (formattedVal > max) formattedVal = max
-			if (isNaN(formattedVal)) formattedVal = 0;
+			if (isNaN(formattedVal)) formattedVal = min;
 
 			$(this).val(formattedVal);
 		});
