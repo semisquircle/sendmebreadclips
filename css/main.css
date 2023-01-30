@@ -16,7 +16,7 @@ body {
 }
 
 * {
-	font-family: "Inkwell Serif";
+	font-family: "Inkwell Sans";
 	font-weight: 500;
 	box-sizing: border-box;
 }
@@ -64,6 +64,7 @@ div {
 	padding: 3rem 2rem;
 	border-radius: calc(var(--border-radius) - var(--border-width));
 	background: var(--bread1);
+	background-image: url("../img/bread-texture.png");
 	color: var(--toast3);
 	overflow: hidden;
 	z-index: 6;
@@ -97,6 +98,7 @@ div {
 	align-items: center;
 }
 
+.bread-clip {filter: drop-shadow(0 0 0.5rem #0005);}
 .bread-clip + .bread-clip {margin-left: 0.7rem;}
 
 .bread-clip-container .bread-clip:nth-child(1) {width: 4.5rem;}
@@ -140,7 +142,10 @@ div {
 
 
 /* Why */
-.slice3 .bread-face {padding: 4rem 2rem;}
+.slice3 .bread-face {
+	font-size: 1.3rem;
+	padding: 4rem 2rem;
+}
 
 .quarter-container {
 	flex-direction: row;
@@ -171,14 +176,15 @@ div {
 	margin-right: 2rem;
 }
 
-.how-row div {
+.how-num {
 	justify-content: flex-start;
 	align-items: flex-start;
 	height: 100%;
+	min-width: 1em;
 	font-family: "Inkwell Tuscan";
 	font-size: 2rem;
 	font-weight: 900;
-	margin-right: 1rem;
+	margin-right: 0.5rem;
 	color: var(--toast1);
 }
 
@@ -258,8 +264,11 @@ div {
 	color: white;
 	cursor: pointer;
 }
+.clip-adj, .clip-adj svg {transition: all 0.05s;}
 .clip-adj:nth-child(1) svg {transform: scaleX(-1);}
 .clip-adj:hover {background: var(--toast3);}
+.dec:active svg {transform: translateY(0.15rem) scaleX(-1);}
+.inc:active svg {transform: translateY(-0.15rem);}
 
 .submit-btn {
 	display: flex;
@@ -276,8 +285,10 @@ div {
 	background: var(--toast1);
 	color: white;
 	cursor: pointer;
+	transition: all 0.05s;
 }
 .submit-btn:hover {background: var(--toast3);}
+.submit-btn:active {transform: rotate(-2deg);}
 
 
 
