@@ -2,9 +2,7 @@ html {font-size: 9px;}
 
 .github-corner {display: none !important;}
 
-.bread {
-	flex-direction: column;
-}
+.bread {flex-direction: column;}
 
 .bread-slice {
 	width: 100%;
