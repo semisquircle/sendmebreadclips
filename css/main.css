@@ -20,6 +20,7 @@ body {
 	font-weight: 500;
 	line-height: 1.3;
 	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
 }
 
 div {
@@ -83,7 +84,7 @@ div {
 
 .title {
 	font-family: "Inkwell Tuscan";
-	font-size: 1.5rem;
+	font-size: 1.4rem;
 	font-weight: 900;
 	color: var(--toast3);
 }
