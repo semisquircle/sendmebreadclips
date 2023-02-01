@@ -1,11 +1,7 @@
 :root {
-	--bread1: #ecddb6;
-	--bread2: #ca9a4e;
-	--bread3: #7d2a0c;
+	--background: #7d2a0c;
 
-	--toast1: #c68028;
-	--toast2: #ad7023;
-	--toast3: #905c1b;
-	--toast4: #794d16;
-	--toast5: #674112;
+	--bread1: #f1e7d3;
+	--bread2: #BF9460;
+	--bread3: #905c1b;
 }

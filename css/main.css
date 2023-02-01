@@ -11,14 +11,14 @@ body {
 	justify-content: center;
 	align-items: center;
 	margin: 0;
-	background: #7d2a0c;
+	background: var(--background);
 	overflow: hidden;
 }
 
 * {
 	font-family: "Inkwell Sans";
-	font-weight: 500;
-	line-height: 1.3;
+	font-weight: 700;
+	line-height: 1.2;
 	box-sizing: border-box;
 	-webkit-tap-highlight-color: transparent;
 }
@@ -51,8 +51,6 @@ div {
 	overflow: hidden;
 }
 .bread .bread-slice:not(:last-child) {margin-right: calc(-1 * var(--slice-offset));}
-/* .bread-slice:nth-child(odd) {transform: rotate(2deg);}
-.bread-slice:nth-child(even) {transform: rotate(-2deg);} */
 
 .current-slice:not(.bread-slice:first-child) {margin-left: calc(var(--slice-offset) + 4rem);}
 
@@ -63,11 +61,11 @@ div {
 	height: var(--slice-dimension);
 	width: var(--slice-dimension);
 	font-size: 1rem;
-	padding: 3rem 2rem;
+	padding: 2rem 2rem;
 	border-radius: calc(var(--border-radius) - var(--border-width));
 	background: var(--bread1);
 	background-image: url("../img/bread-texture.png");
-	color: var(--toast3);
+	color: var(--bread2);
 	overflow: hidden;
 	z-index: 6;
 }
@@ -84,15 +82,10 @@ div {
 
 .title {
 	font-family: "Inkwell Tuscan";
-	font-size: 1.4rem;
+	font-size: 2.5rem;
 	font-weight: 900;
-	color: var(--toast3);
-}
-.title span {
-	align-self: flex-end;
-	font-size: 1rem;
-	font-weight: 700;
-	color: var(--toast1);
+	line-height: 0.9;
+	color: var(--bread3);
 }
 
 .bread-clip-container {
@@ -100,20 +93,19 @@ div {
 	align-items: center;
 }
 
-.bread-clip {filter: drop-shadow(0 0 0.5rem #0005);}
-.bread-clip + .bread-clip {margin-left: 0.7rem;}
+.bread-clip + .bread-clip {margin-left: 1rem;}
 
-.bread-clip-container .bread-clip:nth-child(1) {width: 4.5rem;}
+.bread-clip-container .bread-clip:nth-child(1) {width: 5rem;}
 .bread-clip-container .bread-clip:nth-child(1) path {fill: #00a9a6;}
-.bread-clip-container .bread-clip:nth-child(2) {width: 5rem;}
-.bread-clip-container .bread-clip:nth-child(2) path {fill: white;}
-.bread-clip-container .bread-clip:nth-child(3) {width: 4rem;}
+.bread-clip-container .bread-clip:nth-child(2) {width: 6rem;}
+.bread-clip-container .bread-clip:nth-child(2) path {fill: #f28715;}
+.bread-clip-container .bread-clip:nth-child(3) {width: 5rem;}
 .bread-clip-container .bread-clip:nth-child(3) path {fill: #ba365c;}
 
 .info {display: block;}
 .info span {
-	font-weight: 700;
-	color: var(--toast1);
+	font-weight: 900;
+	color: var(--bread3);
 }
 
 
@@ -131,14 +123,16 @@ div {
 }
 
 .clip-example {
-	font-size: 0.7em;
+	font-size: 0.8em;
+	font-weight: 500;
 	font-style: italic;
-	color: var(--toast1);
+	line-height: 1;
+	color: var(--bread3);
 }
 
 .clip-example img {
 	width: 5.1rem;
-	margin-bottom: 0.8em;
+	margin-bottom: 0.5rem;
 }
 
 
@@ -152,9 +146,10 @@ div {
 .quarter-container {
 	flex-direction: row;
 	align-items: center;
-	font-size: 5rem;
+	font-family: "Inkwell Tuscan";
+	font-size: 6rem;
 	font-weight: 900;
-	color: var(--toast1);
+	color: var(--bread3);
 }
 
 .quarter {
@@ -165,6 +160,12 @@ div {
 
 
 /* How */
+.how-list {
+	flex-grow: 1;
+	flex-direction: column;
+	justify-content: center;
+}
+
 .how-row {
 	flex-direction: row;
 	justify-content: flex-start;
@@ -172,6 +173,7 @@ div {
 	width: 100%;
 	text-align: left;
 }
+.how-row + .how-row {margin-top: 1rem;}
 
 .how-row img {
 	height: 3rem;
@@ -187,7 +189,7 @@ div {
 	font-size: 2rem;
 	font-weight: 900;
 	margin-right: 0.5rem;
-	color: var(--toast1);
+	color: var(--bread3);
 }
 
 
@@ -197,50 +199,34 @@ div {
 
 .form {width: 100%;}
 
-.form-row {
-	align-items: flex-start;
+.form-input, .clip-counter {
+	height: 2.3rem;
+	border-radius: 0.4rem !important;
+}
+
+.form-input {
 	width: 100%;
-}
-.form-row + .form-row {margin-top: 0.6rem;}
-
-.form-question {
-	font-size: 0.9em;
-	margin-bottom: 0.3em;
-}
-
-.form-answer {width: 100%;}
-
-.name-input, .clip-counter {height: 2rem;}
-.name-input, .clip-input {
-	font-size: 0.9em;
+	font-size: 1rem;
 	padding: 0 1em;
 	margin: 0;
-	color: var(--toast1);
+	background: white;
+	color: var(--bread3);
+	border: 0;
 	outline: none;
 	border-radius: 0;
 	-webkit-appearance: none;
 }
-
-.name-input {
-	width: 100%;
-	border: 0;
-	border-radius: 0.4rem;
-	background: white;
-}
+.form-input + .form-input, .clip-row {margin-top: 0.8rem;}
 
 .clip-row {
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 1.5rem !important;
 }
-
-.clip-row .form-question {margin: 0;}
 
 .clip-counter {
 	flex-direction: row;
 	width: 10rem;
-	border-radius: 0.5rem;
 	overflow: hidden;
 }
 .clip-counter > * {height: 100%;}
@@ -248,27 +234,28 @@ div {
 .clip-input {
 	text-align: center;
 	width: 100%;
+	font-size: 1.3rem;
 	border: 0;
-	border-left: 0;
-	border-right: 0;
 	background: white;
+	color: var(--bread3);
 }
 
 .clip-adj {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-width: 2.2rem;
+	min-width: 2.3rem;
 	font-size: 0.9rem;
 	border: 0;
 	outline: none;
-	background: var(--toast1);
+	background: var(--bread2);
 	color: white;
 	cursor: pointer;
 }
+.clip-adj svg {font-size: 1rem;}
 .clip-adj, .clip-adj svg {transition: all 0.05s;}
 .clip-adj:nth-child(1) svg {transform: scaleX(-1);}
-.clip-adj:hover {background: var(--toast3);}
+.clip-adj:hover {background: var(--bread3);}
 .dec:active svg {transform: translateY(0.15rem) scaleX(-1);}
 .inc:active svg {transform: translateY(-0.15rem);}
 
@@ -278,19 +265,37 @@ div {
 	align-items: center;
 	height: 3.5rem;
 	width: 100%;
-	font-family: "Inkwell Tuscan";
 	font-size: 1.5rem;
 	font-weight: 700;
-	border: 0;
+	border: 0.2rem solid var(--bread2);
 	border-radius: 999rem;
 	outline: 0;
-	background: var(--toast1);
-	color: white;
+	background: transparent;
+	color: var(--bread2);
 	cursor: pointer;
 	transition: all 0.05s;
+	pointer-events: none;
 }
-.submit-btn:hover {background: var(--toast3);}
-.submit-btn:active {transform: rotate(-2deg);}
+.submit-btn span {font-family: "Inkwell Tuscan";}
+
+.ready-to-submit .submit-btn {
+	background: var(--bread2);
+	color: white;
+	border-color: var(--bread2);
+	pointer-events: all;
+}
+.ready-to-submit .submit-btn:hover {
+	background: var(--bread3);
+	border-color: var(--bread3);
+}
+.ready-to-submit .submit-btn:active {transform: rotate(-2deg);}
+
+.submitted-text {display: none;}
+
+.submitted, .submitted * {pointer-events: none !important;}
+.submitted .submit-btn {background: var(--bread3);}
+.submitted .unsubmitted-text {display: none;}
+.submitted .submitted-text {display: inline;}
 
 
 
@@ -334,7 +339,7 @@ div {
 	border: 0.2em solid var(--bread2);
 	border-radius: 0.5em;
 	background: var(--bread1);
-	color: var(--toast3);
+	color: var(--bread3);
 	filter: drop-shadow(0 0.3em var(--bread2));
 }
 .arrow-right {margin-left: 0.5em;}

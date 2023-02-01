@@ -1,15 +1,23 @@
 <?php
+header('Access-Control-Allow-Origin: *');
+ini_set('display_errors', 1); 
+error_reporting(E_ALL);
+
+$name = $_REQUEST['name'];
+$email = $_REQUEST['email'];
+$numClips = $_REQUEST['numClips'];
 
 $to = "shawngallagher04@gmail.com";
 
-$subject = "My subject";
+$subject = "someone wants to send you bread clips";
 
-$message = "First line of text\nSecond line of text";
+$message = "
+name: $name<br>
+email: $email<br>
+wants to send $numClips clips
+";
 
-$headers = "From: The Sender Name <sender@johnmorrisonline.com>\r\n";
-$headers .= "Reply-To: replyto@johnmorrisonline.com\r\n";
-$headers .= "Content-type: text/html\r\n"
+$headers = "Content-type: text/html\r\n";
 
 mail($to, $subject, $message, $headers);
-
 ?>
