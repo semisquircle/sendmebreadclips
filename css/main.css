@@ -296,7 +296,11 @@ div {
 .submitted-text {display: none;}
 
 .submitted, .submitted * {pointer-events: none !important;}
-.submitted .submit-btn {background: var(--bread3);}
+.submitted .form {opacity: 0.5;}
+.submitted .submit-btn {
+	background: var(--bread3);
+	border-color: var(--bread3);
+}
 .submitted .unsubmitted-text {display: none;}
 .submitted .submitted-text {display: inline;}
 
