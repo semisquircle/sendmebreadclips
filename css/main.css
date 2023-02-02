@@ -220,6 +220,7 @@ div {
 	-webkit-appearance: none;
 }
 .form-input + .form-input, .clip-row {margin-top: 0.8rem;}
+.form-input::placeholder {color: #0006;}
 
 .clip-row {
 	flex-direction: row;
@@ -239,6 +240,7 @@ div {
 	width: 100%;
 	font-size: 1.3rem;
 	border: 0;
+	border-radius: 0 !important;
 	background: white;
 	color: var(--bread3);
 }
