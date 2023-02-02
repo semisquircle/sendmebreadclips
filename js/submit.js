@@ -3,7 +3,10 @@ $(".form-input").on("input", function() {
 	var nameVal = $(".name-input").val();
 	var emailVal = $(".email-input").val();
 
-	if (nameVal.length > 0 && emailVal.length > 0) slice.addClass("ready-to-submit");
+	var containsAt = emailVal.indexOf("@") >= 0;
+	var containsDot = emailVal.indexOf(".") >= 0;
+
+	if (nameVal.length > 0 && containsAt && containsDot) slice.addClass("ready-to-submit");
 	else slice.removeClass("ready-to-submit");
 });
 
