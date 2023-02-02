@@ -1,110 +1,16 @@
-/* Inkwell Serif Thin */
-@font-face {
-	font-family: "Inkwell Serif";
-	font-weight: 100;
-	font-style: normal;
-	src: url("inkwell-serif/otf/InkwellSerif-Thin.otf") format("opentype");
-}
-
-@font-face {
-	font-family: "Inkwell Serif";
-	font-weight: 100;
-	font-style: italic;
-	src: url("inkwell-serif/otf/InkwellSerif-ThinItalic.otf") format("opentype");
-}
-
-/* Inkwell Serif Light */
-@font-face {
-	font-family: "Inkwell Serif";
-	font-weight: 300;
-	font-style: normal;
-	src: url("inkwell-serif/otf/InkwellSerif-Light.otf") format("opentype");
-}
-
-@font-face {
-	font-family: "Inkwell Serif";
-	font-weight: 300;
-	font-style: italic;
-	src: url("inkwell-serif/otf/InkwellSerif-LightItalic.otf") format("opentype");
-}
-
-/* Inkwell Serif Book */
-@font-face {
-	font-family: "Inkwell Serif";
-	font-weight: 400;
-	font-style: normal;
-	src: url("inkwell-serif/otf/InkwellSerif-Book.otf") format("opentype");
-}
-
-@font-face {
-	font-family: "Inkwell Serif";
-	font-weight: 400;
-	font-style: italic;
-	src: url("inkwell-serif/otf/InkwellSerif-BookItalic.otf") format("opentype");
-}
-
-/* Inkwell Serif Medium */
-@font-face {
-	font-family: "Inkwell Serif";
-	font-weight: 500;
-	font-style: normal;
-	src: url("inkwell-serif/otf/InkwellSerif-Medium.otf") format("opentype");
-}
-
-@font-face {
-	font-family: "Inkwell Serif";
-	font-weight: 500;
-	font-style: italic;
-	src: url("inkwell-serif/otf/InkwellSerif-MediumItalic.otf") format("opentype");
-}
-
-/* Inkwell Serif Bold */
-@font-face {
-	font-family: "Inkwell Serif";
-	font-weight: 700;
-	font-style: normal;
-	src: url("inkwell-serif/otf/InkwellSerif-Bold.otf") format("opentype");
-}
-
-@font-face {
-	font-family: "Inkwell Serif";
-	font-weight: 700;
-	font-style: italic;
-	src: url("inkwell-serif/otf/InkwellSerif-BoldItalic.otf") format("opentype");
-}
-
-/* Inkwell Serif Black */
-@font-face {
-	font-family: "Inkwell Serif";
-	font-weight: 900;
-	font-style: normal;
-	src: url("inkwell-serif/otf/InkwellSerif-Black.otf") format("opentype");
-}
-
-@font-face {
-	font-family: "Inkwell Serif";
-	font-weight: 900;
-	font-style: italic;
-	src: url("inkwell-serif/otf/InkwellSerif-BlackItalic.otf") format("opentype");
-}
-
-
-
-
-
 /* Inkwell Sans Thin */
 @font-face {
 	font-family: "Inkwell Sans";
 	font-weight: 100;
 	font-style: normal;
-	src: url("inkwell-sans/otf/InkwellSans-Thin.otf") format("opentype");
+	src: url("inkwell-sans/InkwellSans-Thin.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Inkwell Sans";
 	font-weight: 100;
 	font-style: italic;
-	src: url("inkwell-sans/otf/InkwellSans-ThinItalic.otf") format("opentype");
+	src: url("inkwell-sans/InkwellSans-ThinItalic.woff2") format("woff2");
 }
 
 /* Inkwell Sans Light */
@@ -112,14 +18,14 @@
 	font-family: "Inkwell Sans";
 	font-weight: 300;
 	font-style: normal;
-	src: url("inkwell-sans/otf/InkwellSans-Light.otf") format("opentype");
+	src: url("inkwell-sans/InkwellSans-Light.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Inkwell Sans";
 	font-weight: 300;
 	font-style: italic;
-	src: url("inkwell-sans/otf/InkwellSans-LightItalic.otf") format("opentype");
+	src: url("inkwell-sans/InkwellSans-LightItalic.woff2") format("woff2");
 }
 
 /* Inkwell Sans Book */
@@ -127,14 +33,14 @@
 	font-family: "Inkwell Sans";
 	font-weight: 400;
 	font-style: normal;
-	src: url("inkwell-sans/otf/InkwellSans-Book.otf") format("opentype");
+	src: url("inkwell-sans/InkwellSans-Book.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Inkwell Sans";
 	font-weight: 400;
 	font-style: italic;
-	src: url("inkwell-sans/otf/InkwellSans-BookItalic.otf") format("opentype");
+	src: url("inkwell-sans/InkwellSans-BookItalic.woff2") format("woff2");
 }
 
 /* Inkwell Sans Medium */
@@ -142,14 +48,14 @@
 	font-family: "Inkwell Sans";
 	font-weight: 500;
 	font-style: normal;
-	src: url("inkwell-sans/otf/InkwellSans-Medium.otf") format("opentype");
+	src: url("inkwell-sans/InkwellSans-Medium.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Inkwell Sans";
 	font-weight: 500;
 	font-style: italic;
-	src: url("inkwell-sans/otf/InkwellSans-MediumItalic.otf") format("opentype");
+	src: url("inkwell-sans/InkwellSans-MediumItalic.woff2") format("woff2");
 }
 
 /* Inkwell Sans Bold */
@@ -157,14 +63,14 @@
 	font-family: "Inkwell Sans";
 	font-weight: 700;
 	font-style: normal;
-	src: url("inkwell-sans/otf/InkwellSans-Bold.otf") format("opentype");
+	src: url("inkwell-sans/InkwellSans-Bold.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Inkwell Sans";
 	font-weight: 700;
 	font-style: italic;
-	src: url("inkwell-sans/otf/InkwellSans-BoldItalic.otf") format("opentype");
+	src: url("inkwell-sans/InkwellSans-BoldItalic.woff2") format("woff2");
 }
 
 /* Inkwell Sans Black */
@@ -172,14 +78,14 @@
 	font-family: "Inkwell Sans";
 	font-weight: 900;
 	font-style: normal;
-	src: url("inkwell-sans/otf/InkwellSans-Black.otf") format("opentype");
+	src: url("inkwell-sans/InkwellSans-Black.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Inkwell Sans";
 	font-weight: 900;
 	font-style: italic;
-	src: url("inkwell-sans/otf/InkwellSans-BlackItalic.otf") format("opentype");
+	src: url("inkwell-sans/InkwellSans-BlackItalic.woff2") format("woff2");
 }
 
 
@@ -192,40 +98,40 @@
 	font-family: "Inkwell Tuscan";
 	font-weight: 100;
 	font-style: normal;
-	src: url("inkwell-serif/otf/InkwellSerif-Thin.otf") format("opentype");
+	src: url("inkwell-tuscan/InkwellTuscan-Thin.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Inkwell Tuscan";
 	font-weight: 300;
 	font-style: normal;
-	src: url("inkwell-tuscan/otf/InkwellTuscan-Light.otf") format("opentype");
+	src: url("inkwell-tuscan/InkwellTuscan-Light.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Inkwell Tuscan";
 	font-weight: 400;
 	font-style: normal;
-	src: url("inkwell-tuscan/otf/InkwellTuscan-Book.otf") format("opentype");
+	src: url("inkwell-tuscan/InkwellTuscan-Book.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Inkwell Tuscan";
 	font-weight: 500;
 	font-style: normal;
-	src: url("inkwell-tuscan/otf/InkwellTuscan-Medium.otf") format("opentype");
+	src: url("inkwell-tuscan/InkwellTuscan-Medium.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Inkwell Tuscan";
 	font-weight: 700;
 	font-style: normal;
-	src: url("inkwell-tuscan/otf/InkwellTuscan-Bold.otf") format("opentype");
+	src: url("inkwell-tuscan/InkwellTuscan-Bold.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Inkwell Tuscan";
 	font-weight: 900;
 	font-style: normal;
-	src: url("inkwell-tuscan/otf/InkwellTuscan-Black.otf") format("opentype");
+	src: url("inkwell-tuscan/InkwellTuscan-Black.woff2") format("woff2");
 }
