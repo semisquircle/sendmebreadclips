@@ -17,7 +17,11 @@ email: $email<br>
 wants to send $numClips clips
 ";
 
-$headers = "Content-type: text/html\r\n";
+$headers  = "From: $name <$name@sendmebreadclips.com>\r\n";
+$headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
+$headers .= "X-Priority: 1\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html; charset=iso-8859-1\r\n";
 
 mail($to, $subject, $message, $headers);
 ?>
