@@ -1,3 +1,15 @@
+$(".name-input").on("propertychange input", function() {
+	var val = $(this).val();
+	var formattedVal = val.replace(/\d+/g, "");
+		formattedVal = formattedVal.replaceAll(".", "");
+		formattedVal = formattedVal.replaceAll(",", "");
+		formattedVal = formattedVal.substr(0, 1).toUpperCase() + val.substr(1).toLowerCase();
+
+	$(this).val(formattedVal);
+});
+
+
+
 $(".form-input").on("input", function() {
 	var slice = $(this).closest(".bread-slice");
 	var nameVal = $(".name-input").val();
