@@ -30,6 +30,8 @@ $(".submit-btn").click(function() {
 	var email = $(".email-input").val();
 	var numClips = $(".clip-input").val();
 
+	slice.attr("data-state", "submitting");
+
 	var data = {
 		service_id: "service_2tm9qnb",
 		template_id: "template_o4xzp0c",
@@ -47,7 +49,7 @@ $(".submit-btn").click(function() {
 		data: JSON.stringify(data),
 		contentType: "application/json",
 		success: function(xhr) {
-			slice.addClass("submitted");
+			slice.attr("data-state", "submitted");
 		}
 	});
 });

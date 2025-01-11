@@ -93,14 +93,14 @@ div {
 	align-items: center;
 }
 
-.bread-clip + .bread-clip {margin-left: 1rem;}
-
 .bread-clip-container .bread-clip:nth-child(1) {width: 5rem;}
 .bread-clip-container .bread-clip:nth-child(1) path {fill: #00a9a6;}
 .bread-clip-container .bread-clip:nth-child(2) {width: 6rem;}
 .bread-clip-container .bread-clip:nth-child(2) path {fill: #f28715;}
 .bread-clip-container .bread-clip:nth-child(3) {width: 5rem;}
 .bread-clip-container .bread-clip:nth-child(3) path {fill: #ba365c;}
+
+.bread-clip + .bread-clip {margin-left: 1rem;}
 
 .info {display: block;}
 .info span {
@@ -295,16 +295,27 @@ div {
 }
 .ready-to-submit .submit-btn:active {transform: rotate(-2deg);}
 
-.submitted-text {display: none;}
 
-.submitted, .submitted * {pointer-events: none !important;}
-.submitted .form {opacity: 0.5;}
-.submitted .submit-btn {
+
+/* States */
+[data-state="submit"] .unsubmitted-text {display: inline;}
+[data-state="submit"] .submitting-text {display: none;}
+[data-state="submit"] .submitted-text {display: none;}
+
+[data-state="submitting"], [data-state="submitting"] * {pointer-events: none !important;}
+[data-state="submitting"] .unsubmitted-text {display: none;}
+[data-state="submitting"] .submitting-text {display: inline;}
+[data-state="submitting"] .submitted-text {display: none;}
+
+[data-state="submitted"], [data-state="submitted"] * {pointer-events: none !important;}
+[data-state="submitted"] .form {opacity: 0.5;}
+[data-state="submitted"] .submit-btn {
 	background: var(--bread3);
 	border-color: var(--bread3);
 }
-.submitted .unsubmitted-text {display: none;}
-.submitted .submitted-text {display: inline;}
+[data-state="submitted"] .unsubmitted-text {display: none;}
+[data-state="submitted"] .submitting-text {display: none;}
+[data-state="submitted"] .submitted-text {display: inline;}
 
 
 
