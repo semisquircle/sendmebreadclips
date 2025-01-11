@@ -30,14 +30,22 @@ $(".submit-btn").click(function() {
 	var email = $(".email-input").val();
 	var numClips = $(".clip-input").val();
 
+	var data = {
+		service_id: "service_2tm9qnb",
+		template_id: "template_o4xzp0c",
+		user_id: "wWd71XxZYhY1eYL9J",
+		template_params: {
+			"from_name": name,
+			"from_email": email,
+			"num_clips": numClips
+		}
+	};
+
 	$.ajax({
-		type: "GET",
-		data: {
-			name: name,
-			email: email,
-			numClips: numClips
-		},
-		url: "https://sendmebreadclips-backend.000webhostapp.com/mail.php",
+		url: "https://api.emailjs.com/api/v1.0/email/send",
+		type: "POST",
+		data: JSON.stringify(data),
+		contentType: "application/json",
 		success: function(xhr) {
 			slice.addClass("submitted");
 		}
