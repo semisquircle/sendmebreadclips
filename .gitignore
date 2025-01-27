@@ -1,5 +1,5 @@
 .DS_Store
-*.psd
-*.ai
+**/*.psd
+**/*.ai
 img/quarter/quarter-orig.gif
 img/quarter/quarter-adj.gif
