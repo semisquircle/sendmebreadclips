@@ -176,6 +176,16 @@ $(".bread-slice").each(function() {
 		"d": breadData,
 	}));
 
+	// Mobile visual fix
+	breadShadow.appendChild(createSvgElement("rect", {
+		"class": "bread-shadow-mobile-fix",
+		"x": "0",
+		"y": "11.5",
+		"width": "100",
+		"height": "12",
+		"fill": breadClr2
+	}));
+
 	// Shadow overlay 1 path
 	breadShadow.appendChild(createSvgElement("path", {
 		"fill": `url(#${gradient1Id})`,
@@ -195,9 +205,6 @@ $(".bread-slice").each(function() {
 	}));
 
 	this.append(breadShadow);
-
-	// Mobile visual fix
-	$(this).append(`<div class="bread-shadow-mobile-fix"></div>`);
 });
 
 

@@ -1,5 +1,7 @@
 html { font-size: 11px; }
 
+body { margin-top: calc(-1 * (var(--current-slice) - 1) * var(--slice-thickness)); }
+
 .github-corner { display: none !important; }
 
 .bread { flex-direction: column; }
