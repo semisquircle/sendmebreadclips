@@ -7,4 +7,12 @@
 
 	--font1: "Inkwell Sans";
 	--font2: "Inkwell Tuscan";
+
+	--slice-dimension: 26rem;
+	--slice-thickness: 4rem;
+	--slice-border-width: 0.7rem;
+	--slice-offset: calc(var(--slice-dimension) + 2 * var(--slice-border-width));
+	--slice-spacing: 3rem;
+	--slice-duration: 0.5s;
+	--current-slice: 1;
 }

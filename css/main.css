@@ -11,7 +11,9 @@ body {
 	justify-content: center;
 	align-items: center;
 	margin: 0;
+	margin-top: calc(-1 * (var(--current-slice) - 1) * (var(--slice-thickness) - var(--slice-border-width)));
 	background: var(--bg-clr);
+	transition: margin var(--slice-duration);
 	overflow: hidden;
 }
 
@@ -31,15 +33,7 @@ div {
 
 
 /* Bread */
-.bread {
-	--slice-dimension: 26rem;
-	--slice-thickness: 4rem;
-	--slice-border-width: 0.7rem;
-	--slice-offset: calc(var(--slice-dimension) + 2 * var(--slice-border-width));
-	--slice-spacing: 3rem;
-	--slice-duration: 0.5s;
-	flex-direction: row;
-}
+.bread { flex-direction: row; }
 
 .bread-slice {
 	position: relative;
@@ -373,10 +367,10 @@ div {
 .mobile-nav {
 	display: none;
 	flex-direction: row;
-	font-size: 2rem;
+	font-size: 1.5rem;
 }
 .mobile-nav svg {
-	margin: 0 0.1em;
+	margin: 0 0.2em;
 	transform: translateY(0.1em);
 }
 .mobile-nav .fa-hand-point-up { transform: translateY(0.1em) scaleX(-1); }

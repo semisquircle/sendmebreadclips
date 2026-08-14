@@ -1,17 +1,8 @@
-$(".bread-clip").eq(0).load("img/clips/svgs/2.svg");
-$(".bread-clip").eq(1).load("img/clips/svgs/1.svg");
-$(".bread-clip").eq(2).load("img/clips/svgs/3.svg");
-
-$(".how-img").eq(0).load("img/icons/bread-clipboard.svg");
-$(".how-img").eq(1).load("img/icons/email-notif.svg");
-$(".how-img").eq(2).load("img/icons/clip-envelope.svg");
-
-
 const SVG_NS = "http://www.w3.org/2000/svg";
 const breadData = "M 49.999512,0 C -12.189872,7.6158405e-7 -1.8596576,31.618633 5.8139648,34.999512 2.7878059,38.27601 1.1066243,41.85622 1.0927734,46.268555 V 93.00049 a 7,7 45 0 0 7,7 H 91.906 a 7,7 135 0 0 7,-7 V 46.268555 C 98.90593,41.862679 97.244286,38.283266 94.236328,34.999512 101.82857,31.625774 112.19451,-7.6165294e-7 49.999512,0 Z";
 
-const sliceDimension = parseFloat($(".bread").css("--slice-dimension"));
-const sliceBorderWidth = parseFloat($(".bread").css("--slice-border-width"));
+const sliceDimension = parseFloat($(":root").css("--slice-dimension"));
+const sliceBorderWidth = parseFloat($(":root").css("--slice-border-width"));
 const strokeWidth = sliceBorderWidth / (sliceDimension + 2 * sliceBorderWidth) * 100;
 
 const bgClr = $(":root").css("--bread-clr1");
@@ -20,6 +11,16 @@ const breadClr2 = $(":root").css("--bread-clr2");
 const breadClr3 = $(":root").css("--bread-clr3");
 const shadowColor = breadClr3;
 const shadowOpacity = 0.4;
+
+
+$(".bread-clip").eq(0).load("img/clips/svgs/2.svg");
+$(".bread-clip").eq(1).load("img/clips/svgs/1.svg");
+$(".bread-clip").eq(2).load("img/clips/svgs/3.svg");
+
+$(".how-img").eq(0).load("img/icons/bread-clipboard.svg");
+$(".how-img").eq(1).load("img/icons/email-notif.svg");
+$(".how-img").eq(2).load("img/icons/clip-envelope.svg");
+
 
 function createSvgElement(tag, attributes = {}) {
 	const element = document.createElementNS(SVG_NS, tag);
@@ -223,6 +224,7 @@ function setSliceCoolDown() {
 function newSlice(slice) {
 	$(".bread-slice").removeClass("current-slice");
 	$(`.bread-slice:nth-child(${slice})`).addClass("current-slice");
+	$(":root").css("--current-slice", slice);
 }
 
 $(document).keydown(function(e) {
