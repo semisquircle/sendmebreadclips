@@ -1,16 +1,16 @@
-html {font-size: 9px;}
+html { font-size: 9px; }
 
-.github-corner {display: none !important;}
+.github-corner { display: none !important; }
 
-.bread {flex-direction: column;}
+.bread { flex-direction: column; }
 
 .bread-slice {
 	width: 100%;
-	padding-right: var(--border-width);
+	padding-right: var(--slice-border-width);
 	padding-bottom: 0;
 	margin: 0;
 }
-.bread .bread-slice:not(:last-child) {margin-bottom: calc(-1 * var(--slice-offset));}
+.bread .bread-slice:not(:last-child) { margin-bottom: calc(-1 * var(--slice-offset)); }
 .current-slice:not(.bread-slice:first-child) {
 	margin-left: 0;
 	margin-top: calc(var(--slice-offset) + 4rem);
@@ -24,13 +24,14 @@ html {font-size: 9px;}
 .bread-shadow {
 	top: auto;
 	bottom: 0;
-	height: var(--slice-thickness);
-	width: 100%;
-	background: linear-gradient(transparent, #0002);
 }
+.bread-shadow-gradient-1 { display: none; }
+.bread-shadow-gradient-2 { display: none; }
+.bread-shadow-gradient-mobile { display: flex; }
+.bread-shadow-mobile-fix { display: flex; }
 
 
 
 /* Nav */
-.desktop-nav {display: none;}
-.mobile-nav {display: flex;}
+.desktop-nav { display: none; }
+.mobile-nav { display: flex; }

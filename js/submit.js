@@ -9,7 +9,6 @@ $(".name-input").on("propertychange input", function() {
 });
 
 
-
 $(".form-input").on("input", function() {
 	var slice = $(this).closest(".bread-slice");
 	var nameVal = $(".name-input").val();
@@ -21,7 +20,6 @@ $(".form-input").on("input", function() {
 	if (nameVal.length > 0 && containsAt && containsDot) slice.addClass("ready-to-submit");
 	else slice.removeClass("ready-to-submit");
 });
-
 
 
 $(".submit-btn").click(function() {
