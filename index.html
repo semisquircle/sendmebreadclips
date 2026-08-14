@@ -15,6 +15,7 @@
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="https://kit.fontawesome.com/5978d27576.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 	<link rel="stylesheet" href="css/variables.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -148,6 +149,7 @@
 					<span class="unsubmitted-text">Submit to Shawn</span>
 					<span class="submitting-text">Submitting...</span>
 					<span class="submitted-text">Submitted!</span>
+					<span class="error-text">Server Error...<br>Reload and Try Again</span>
 				</button>
 			</div>
 		</div>
@@ -163,12 +165,18 @@
 			to scroll through slices
 		</div>
 
-		<div class="mobile-nav">Swipe to scroll through slices</div>
+		<div class="mobile-nav">
+			Swipe
+			<i class="fa-solid fa-hand-point-up"></i>
+			or
+			<i class="fa-solid fa-hand-point-down"></i>
+			to scroll through slices
+		</div>
 	</div>
 
 
-	<script src="js/main.js"></script>
 	<script src="js/swipe.js"></script>
+	<script src="js/main.js"></script>
 	<script src="js/submit.js"></script>
 </body>
 

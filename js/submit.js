@@ -1,3 +1,5 @@
+emailjs.init({ publicKey: "wWd71XxZYhY1eYL9J" });
+
 $(".name-input").on("propertychange input", function() {
 	var val = $(this).val();
 	var formattedVal = val.replace(/\d+/g, "");
@@ -29,25 +31,21 @@ $(".submit-btn").click(function() {
 	var numClips = $(".clip-input").val();
 
 	slice.attr("data-state", "submitting");
+	// setTimeout(() => slice.attr("data-state", "error"), 500);
 
-	var data = {
-		service_id: "service_2tm9qnb",
-		template_id: "template_o4xzp0c",
-		user_id: "wWd71XxZYhY1eYL9J",
-		template_params: {
-			"from_name": name,
-			"from_email": email,
-			"num_clips": numClips
-		}
+	var templateParams = {
+		"from_name": name,
+		"from_email": email,
+		"num_clips": numClips
 	};
-
-	$.ajax({
-		url: "https://api.emailjs.com/api/v1.0/email/send",
-		type: "POST",
-		data: JSON.stringify(data),
-		contentType: "application/json",
-		success: function(xhr) {
+	emailjs.send("service_2tm9qnb", "template_o4xzp0c", templateParams).then(
+		(response) => {
 			slice.attr("data-state", "submitted");
-		}
-	});
+			console.log("Email successfully sent.", response.status, response.text);
+		},
+		(error) => {
+			slice.attr("data-state", "error");
+			console.error("Email failed to send.", error);
+		},
+	);
 });
