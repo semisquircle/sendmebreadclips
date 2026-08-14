@@ -34,4 +34,4 @@ html { font-size: 9px; }
 
 /* Nav */
 .desktop-nav { display: none; }
-.mobile-nav { display: inline; }
+.mobile-nav { display: flex; }

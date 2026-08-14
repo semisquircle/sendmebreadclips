@@ -273,8 +273,8 @@ div {
 }
 .clip-adj svg { font-size: 1rem; }
 .clip-adj, .clip-adj svg { transition: all 0.05s; }
-.clip-adj:nth-child(1) svg { transform: scaleX(-1); }
 .clip-adj:hover { background: var(--bread-clr3); }
+.dec svg { transform: scaleX(-1); }
 .dec:active svg { transform: translateY(0.15rem) scaleX(-1); }
 .inc:active svg { transform: translateY(-0.15rem); }
 
@@ -372,9 +372,14 @@ div {
 
 .mobile-nav {
 	display: none;
+	flex-direction: row;
 	font-size: 2rem;
 }
-.fa-hand-point-up { transform: scaleX(-1); }
+.mobile-nav svg {
+	margin: 0 0.1em;
+	transform: translateY(0.1em);
+}
+.mobile-nav .fa-hand-point-up { transform: translateY(0.1em) scaleX(-1); }
 
 .arrow-key-container {
 	flex-direction: row;
