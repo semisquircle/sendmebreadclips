@@ -1,5 +1,5 @@
 const SVG_NS = "http://www.w3.org/2000/svg";
-const breadData = "M 49.999512,0 C -12.189872,7.6158405e-7 -1.8596576,31.618633 5.8139648,34.999512 2.7878059,38.27601 1.1066243,41.85622 1.0927734,46.268555 V 93.00049 a 7,7 45 0 0 7,7 H 91.906 a 7,7 135 0 0 7,-7 V 46.268555 C 98.90593,41.862679 97.244286,38.283266 94.236328,34.999512 101.82857,31.625774 112.19451,-7.6165294e-7 49.999512,0 Z";
+const breadData = "M 50,0 C -12.189872,0 -1.8596576,31.618633 5.8139648,35 2.7878059,38.27601 1.1066243,41.85622 1.0927734,46.268555 V 93 a 7,7 45 0 0 7,7 H 91.906 a 7,7 135 0 0 7,-7 V 46.268555 C 98.90593,41.862679 97.244286,38.283266 94.236328,35 101.82857,31.625774 112.19451,0 50,0 Z";
 
 const sliceDimension = parseFloat($(":root").css("--slice-dimension"));
 const sliceBorderWidth = parseFloat($(":root").css("--slice-border-width"));
@@ -75,7 +75,6 @@ $(".bread-slice").each(function() {
 		"stroke-width": 2 * strokeWidth,
 		"stroke-linecap": "round",
 		"stroke-linejoin": "round",
-		"stroke-dasharray": "1000 1000",
 		"fill": `url(#${patternId})`,
 		"d": breadData,
 		"clip-path": `url(#bread-path-clip-path-${idx})`
