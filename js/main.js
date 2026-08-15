@@ -73,7 +73,9 @@ $(".bread-slice").each(function() {
 	breadShape.appendChild(createSvgElement("path", {
 		"stroke": breadClr2,
 		"stroke-width": 2 * strokeWidth,
+		"stroke-linecap": "round",
 		"stroke-linejoin": "round",
+		"stroke-dasharray": "1000 1000",
 		"fill": `url(#${patternId})`,
 		"d": breadData,
 		"clip-path": `url(#bread-path-clip-path-${idx})`
